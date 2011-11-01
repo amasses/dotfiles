@@ -26,6 +26,14 @@ alias h='cd ~'
 
 nsm () { nasm -f elf -o "$1".o -l "$1".l "$1".s;}
 
+#-------------
+# Git Aliases
+#-------------
+alias g="git status"
+alias gca="git commit -a"
+alias co="git checkout"
+alias gb="git branch"
+
 #-------------------------------------------------------------
 # spelling typos - highly personal and keyboard-dependent :-)
 #-------------------------------------------------------------

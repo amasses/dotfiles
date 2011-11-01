@@ -31,4 +31,4 @@ parse_git_branch () {
   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/\1$(parse_git_dirty)/"
 }
 
-PS1="\[${MAGENTA}\]\u\[$WHITE\]@\[$ORANGE\]\h \[$WHITE\]in \[$GREEN\]\w\[$WHITE\]\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" on \")\[$PURPLE\]\$(parse_git_branch)\[$RUBY\] using Ruby v. $(ruby -e 'print RUBY_VERSION')\n\[$RESET\]\$ "
+PS1="\[${MAGENTA}\]\u\[$WHITE\]@\[$ORANGE\]\h \[$WHITE\]in \[$GREEN\]\w\[$WHITE\]\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" on \")\[$PURPLE\]\$(parse_git_branch)\[$RUBY\] using $(/Users/Broc/.rvm/bin/rvm-prompt)\n\[$RESET\]\$ "
