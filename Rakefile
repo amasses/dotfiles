@@ -53,6 +53,10 @@ task :install do
       `mv "$HOME/.#{file}" "$HOME/.#{file}.backup"` if backup || backup_all
     end
     `ln -s "$PWD/#{linkable}" "#{target}"`
+    `git config --global branch.master.merge refs/heads/master`
+    `git config --global branch.master.remote origin`
+    `git config --global branch.develop.merge refs/heads/develop`
+    `git config --global branch.develop.remote origin`
   end
 end
 
