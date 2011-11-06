@@ -36,3 +36,6 @@ shopt -s nocaseglob
 #   echo "Screen failed! continuing with normal bash startup"
 # fi
 # [end of auto-screen snippet]
+#
+# Magic to stop me having to type 'bundle exec' all the time :)
+[ -f ~/.dotfiles/rubygems/.bundler-exec.sh ] && source ~/.dotfiles/rubygems/.bundler-exec.sh
